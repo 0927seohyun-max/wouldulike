@@ -1,0 +1,44 @@
+/* style.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000; /* 첫 구동 시 남색 번쩍임 방지 */
+  font-family: 'DungGeunMo', sans-serif;
+  user-select: none;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* 배경에 황홀한 우주 성운 광채 효과 배치 */
+body::before {
+  content: "";
+  position: absolute;
+  width: 80vw;
+  height: 80vh;
+  top: -10vh;
+  left: -10vw;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.08) 0%, rgba(127, 0, 255, 0.05) 50%, transparent 100%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 90vw;
+  height: 90vh;
+  bottom: -20vh;
+  right: -10vw;
+  background: radial-gradient(circle, rgba(255, 0, 128, 0.06) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
